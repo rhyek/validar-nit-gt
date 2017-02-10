@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack -p",
     "dev": "webpack --watch",
-    "prepublish": "npm run build",
-    "test": "npm run build && mocha"
+    "prepublish": "npm run build && npm run test",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
