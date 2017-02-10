@@ -2,13 +2,13 @@
 
 Indica la validez de un texto como Número de Identificación Tributaria (NIT) en Guatemala.
 
-### Installing
+### Instalación
 
 ```js
 npm install --save validar-nit-gt
 ```
 
-### Example
+### Ejemplo
 ```js
 import validarNIT from 'validar-nit-gt'
 

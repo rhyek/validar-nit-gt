@@ -1,7 +1,7 @@
-var assert = require('assert')
-var validarNIT = require('.').default
+const assert = require('assert')
+const validarNIT = require('.').default
 
-var nits = [
+const nits = [
   ['3602978-5', true],
   ['2701164-K', true],
   ['2701164-k', true],
