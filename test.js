@@ -2,6 +2,10 @@ const assert = require('assert')
 const validarNIT = require('.').default
 
 const nits = [
+  [null, false],
+  [{}, false],
+  [Date(), false],
+  [undefined, false],
   ['3602978-5', true],
   ['2701164-K', true],
   ['2701164-k', true],
