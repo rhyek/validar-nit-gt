@@ -1,11 +1,11 @@
 {
   "name": "validar-nit-gt",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Indica la validez de un texto como Número de Identificación Tributaria (NIT) en Guatemala.",
   "main": "dist/main.js",
   "scripts": {
-    "build": "webpack -p",
-    "dev": "webpack --watch",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
     "prepublish": "npm run build && npm run test",
     "test": "mocha"
   },
@@ -27,9 +27,11 @@
   },
   "homepage": "https://github.com/rhyek/validar-nit-gt#readme",
   "devDependencies": {
-    "mocha": "^3.2.0",
-    "ts-loader": "^2.0.0",
-    "typescript": "^2.1.6",
-    "webpack": "^2.2.1"
+    "assert": "^2.0.0",
+    "mocha": "^8.3.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
   }
 }
