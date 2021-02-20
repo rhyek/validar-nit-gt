@@ -6,13 +6,14 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'main.js',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
   resolve: {
     extensions: ['.ts', '.js']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
         loader: 'ts-loader',
