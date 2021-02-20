@@ -20,6 +20,7 @@ const nits = [
 
 for (let [nit, valido] of nits) {
   it(`'${nit}' ${valido ? 'es válido' : 'NO es válido'}.`, function () {
-    assert.strictEqual(valido, validarNIT(nit).resultado)
+    assert.strictEqual(valido, validarNIT(nit))
+    assert.strictEqual(valido, validarNIT(nit, { limpiar: true }).resultado)
   })
 }

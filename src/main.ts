@@ -1,10 +1,14 @@
 const regex = /^(\d+)-(\d|K)$/
 
-export default function (param: any) {
-  var success = false
-  var text = param
-  if (param != null) {
-    text = param.toString().toUpperCase()
+export default function (nit: any, options: { limpiar?: boolean } = {}) {
+  const { limpiar = false } = options
+  var res = {
+    nit: nit,
+    resultado: false
+  }
+
+  if (nit != null) {
+    var text = nit.toString().toUpperCase()
     if (!text.includes('-')) {
       text = text.substring(0, text.length - 1) + '-' + text.substring(text.length - 1);
     }
@@ -16,11 +20,12 @@ export default function (param: any) {
         suma += parseInt(c) * (index + 2)
       })
       const resultado = (11 - (suma % 11)) % 11
-      success = right === (resultado === 10 ? 'K' : resultado.toString())
+      res = {
+        resultado: right === (resultado === 10 ? 'K' : resultado.toString()),
+        nit: text
+      }
     }
   }
-  return {
-    'resultado': success,
-    'nit': text
-  }
+
+  return options.limpiar ? res : res.resultado
 }
